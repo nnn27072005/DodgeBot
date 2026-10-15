@@ -90,7 +90,7 @@ make sure the package is installed in editable mode:
 
 ```bash
 conda activate unitree_rl_mjlab
-cd ~/dodger/deployment
+cd ~/dodgebot/deployment
 pip install -e .
 ```
 
@@ -99,7 +99,7 @@ pip install -e .
 ```bash
 conda create -n unitree_rl_mjlab python=3.11
 conda activate unitree_rl_mjlab
-cd ~/dodger/deployment
+cd ~/dodgebot/deployment
 pip install -e .
 ```
 
@@ -173,7 +173,7 @@ failing.
 ### 2.1 Fetch the external sources (once)
 
 ```bash
-cd ~/dodger/deployment/ros2
+cd ~/dodgebot/deployment/ros2
 ./setup_external.sh
 ```
 
@@ -187,7 +187,7 @@ the Foxy machine. It does read `$ROS_DISTRO`, to pick the matching branch of
 ### 2.2 Build everything
 
 ```bash
-cd ~/dodger/deployment/ros2
+cd ~/dodgebot/deployment/ros2
 ./tools/bootstrap.sh
 ```
 
@@ -202,7 +202,7 @@ tests it has data for. Useful variants:
 ### 2.3 Or build the pieces by hand
 
 ```bash
-cd ~/dodger/deployment/ros2
+cd ~/dodgebot/deployment/ros2
 unset VIRTUAL_ENV CONDA_PREFIX PYTHONHOME
 source /opt/ros/$ROS_DISTRO/setup.bash
 colcon build --merge-install \
@@ -215,7 +215,7 @@ activated in that shell — see §1.
 The simulator is plain CMake, not colcon:
 
 ```bash
-cd ~/dodger/deployment/simulate && mkdir -p build_ros2 && cd build_ros2
+cd ~/dodgebot/deployment/simulate && mkdir -p build_ros2 && cd build_ros2
 cmake .. -DCMAKE_BUILD_TYPE=Release -DUNITREE_MUJOCO_WITH_ROS2=ON \
       -DCMAKE_PREFIX_PATH=$PWD/../../ros2/install \
       -DPython3_EXECUTABLE=/usr/bin/python3
@@ -225,7 +225,7 @@ make -j$(nproc)
 The walking controller, needed only if you want the robot to walk:
 
 ```bash
-cd ~/dodger/deployment/deploy/robots/g1 && mkdir -p build && cd build
+cd ~/dodgebot/deployment/deploy/robots/g1 && mkdir -p build && cd build
 cmake .. -DCMAKE_PREFIX_PATH=$PWD/../../../../ros2/install
 make -j$(nproc)
 ```
@@ -246,7 +246,7 @@ make -j$(nproc)
 Every new terminal needs these three lines first:
 
 ```bash
-cd ~/dodger/deployment/ros2
+cd ~/dodgebot/deployment/ros2
 source /opt/ros/$ROS_DISTRO/setup.bash
 source install/setup.bash
 ```

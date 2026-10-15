@@ -1,6 +1,6 @@
-# DODGER training
+# DodgeBot training
 
-This directory contains the MJX/JAX training implementation for DODGER, a
+This directory contains the MJX/JAX training implementation for DodgeBot, a
 constraint-aware high-level navigation policy for Unitree G1. The simulator
 and environment API are derived from
 [MuJoCo Playground](https://github.com/google-deepmind/mujoco_playground).
@@ -12,8 +12,8 @@ The detailed environment, reproduction, playback, and ONNX export guide is in
 ## Quick start
 
 ```bash
-conda create -n dodger-training python=3.11 -y
-conda activate dodger-training
+conda create -n dodgebot-training python=3.11 -y
+conda activate dodgebot-training
 pip install -U "jax[cuda12]"
 pip install -e ".[learning]"
 python -c "import jax, training; print(jax.default_backend())"

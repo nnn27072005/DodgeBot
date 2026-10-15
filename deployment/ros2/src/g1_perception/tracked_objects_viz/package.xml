@@ -10,7 +10,7 @@
     is the obstacles_marker_relay pattern instead. HUMBLE-ONLY like the rest
     of the 3D stack.
   </description>
-  <maintainer email="project-maintainers@users.noreply.github.com">Dodger Project Maintainers</maintainer>
+  <maintainer email="project-maintainers@users.noreply.github.com">DodgeBot Project Maintainers</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

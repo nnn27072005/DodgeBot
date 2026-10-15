@@ -13,7 +13,7 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='Dodger Project Maintainers',
+    maintainer='DodgeBot Project Maintainers',
     maintainer_email='project-maintainers@users.noreply.github.com',
     description='Mirror-state MuJoCo-LiDAR sidecar (§11.2)',
     license='Apache-2.0',

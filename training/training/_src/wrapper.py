@@ -141,12 +141,12 @@ def wrap_for_brax_training(
 
 
 class ConstraintsAsTerminationsWrapper(Wrapper):
-  """Applies DODGER reward/discount while preserving hard physical resets.
+  """Applies DodgeBot reward/discount while preserving hard physical resets.
 
   The DPCBF and three low-level command violations are independently normalized
   with exponential moving maxima.  Their maximum fractional termination affects
   only the positive-return bootstrap; the original hard ``done`` is restored
-  before the next environment step, so DODGER never resets a world by itself.
+  before the next environment step, so DodgeBot never resets a world by itself.
   """
 
   def __init__(self, env, config, *, apply_soft_discount):
@@ -173,7 +173,7 @@ class ConstraintsAsTerminationsWrapper(Wrapper):
 
   def step(self, state, action):
     # AutoReset and curriculum accounting must see only genuine environment
-    # terminations, never the fractional DODGER continuation probability.
+    # terminations, never the fractional DodgeBot continuation probability.
     state = state.replace(done=state.info['dodger_hard_done'])
     state = self.env.step(state, action)
     hard_done = state.done

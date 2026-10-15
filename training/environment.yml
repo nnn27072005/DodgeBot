@@ -1,4 +1,4 @@
-name: dodger-training
+name: dodgebot-training
 channels:
   - conda-forge
 dependencies:

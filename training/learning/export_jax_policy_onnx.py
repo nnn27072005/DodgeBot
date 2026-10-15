@@ -87,7 +87,7 @@ class GatEncoder(nn.Module):
 
     edge_dim = int(np.asarray(params["psi1_dense0"]["kernel"]).shape[0])
     if edge_dim != 11:
-      raise ValueError(f"Expected an 11-dimensional DODGER edge, got {edge_dim}")
+      raise ValueError(f"Expected an 11-dimensional DodgeBot edge, got {edge_dim}")
     self.psi1_dense0 = _linear(edge_dim, 64, params["psi1_dense0"])
     self.psi1_dense1 = _linear(64, 16, params["psi1_dense1"])
     self.psi2_dense0 = _linear(16, 16, params["psi2_dense0"])
@@ -278,7 +278,7 @@ def export_policy(
       np.asarray(policy_params["params"]["psi1_dense0"]["kernel"]).shape[0]
   )
   if edge_dim != 11:
-    raise ValueError(f"Expected an 11-dimensional DODGER edge, got {edge_dim}")
+    raise ValueError(f"Expected an 11-dimensional DodgeBot edge, got {edge_dim}")
   gat_encoder = GatEncoder(policy_params).eval()
   policy_head = PolicyHead(
       policy_params,

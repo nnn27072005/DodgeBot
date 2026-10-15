@@ -1,11 +1,11 @@
-# DODGER G1 navigation training
+# DodgeBot G1 navigation training
 
 `G1MultiObstacleNavigation` trains a 10 Hz high-level G1 navigation actor over
 a frozen 50 Hz locomotion policy. MuJoCo integrates the robot and applies the
 deployment PD gains at 500 Hz. A batched JAX primal-dual interior-point solver
 evaluates a 50 Hz multi-obstacle DPCBF QP during training.
 
-For DODGER, the policy action—not the QP-filtered action—updates the
+For DodgeBot, the policy action—not the QP-filtered action—updates the
 environment. The filtered action is a counterfactual safe reference used by
 the tracking reward. Two soft constraints determine the fractional
 continuation discount:
@@ -23,7 +23,7 @@ terminations and penalty returns use the hard environment termination.
 
 The fixed implementation choices intentionally omitted from the public config
 are: 50 Hz QP evaluation, surface-clearance GAT edges without an appended node
-radius, the derivative DPCBF constraint above, both DODGER soft constraints,
+radius, the derivative DPCBF constraint above, both DodgeBot soft constraints,
 the split value critic, dynamic curriculum transitions, and no high-level
 action randomization or yaw-magnitude penalty.
 
@@ -32,8 +32,8 @@ action randomization or yaw-magnitude penalty.
 From the repository's `training/` directory:
 
 ```bash
-conda create -n dodger-training python=3.11 -y
-conda activate dodger-training
+conda create -n dodgebot-training python=3.11 -y
+conda activate dodgebot-training
 pip install -U "jax[cuda12]"
 pip install -e ".[learning]"
 python -c "import jax, training; print(jax.default_backend())"

@@ -7,7 +7,7 @@ index 83ec3be..3d7dfbe 100644
  
  add_executable(unitree_mujoco ${SIM_SRC} src/main.cc)
 +target_include_directories(unitree_mujoco PRIVATE
-+  /path/to/dodger/deployment/ros2/src/g1_perception/dpcbf_ros_adapter/include)
++  /path/to/dodgebot/deployment/ros2/src/g1_perception/dpcbf_ros_adapter/include)
  target_link_libraries(unitree_mujoco PRIVATE
    dpcbf_dynamic_obstacles
    dpcbf_safety_filter

@@ -367,7 +367,7 @@ def train(
       ends due to a time_out.
     use_distributional_critic: whether to use a distributional critic
     use_split_value_critic: whether the value network predicts positive and
-      negative DODGER returns with two outputs and one averaged value loss.
+      negative DodgeBot returns with two outputs and one averaged value loss.
     desired_kl: Desired KL divergence for adaptive KL divergence learning rate
       schedule.
     enable_kl_limit: whether to transactionally reject a complete PPO update

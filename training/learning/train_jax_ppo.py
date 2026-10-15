@@ -424,7 +424,7 @@ def main(argv):
     if _WANDB_FINISH_TIMEOUT_SECONDS.value <= 0.0:
       raise ValueError("wandb_finish_timeout_seconds must be positive")
     wandb.init(
-        project="dodger",
+        project="dodgebot",
         name=exp_name,
         settings=wandb.Settings(
             finish_timeout=_WANDB_FINISH_TIMEOUT_SECONDS.value,
@@ -566,7 +566,7 @@ def main(argv):
       elif key.startswith("episode/navigation/dodger_"):
         name = key.removeprefix("episode/navigation/dodger_")
         name = name.removesuffix("_per_step")
-        grouped[f"DODGER/{name}"] = value
+        grouped[f"DodgeBot/{name}"] = value
       elif (
           key.startswith("episode/navigation/hard_cbf_")
           and not env_cfg.qp.hard_feasibility.enabled

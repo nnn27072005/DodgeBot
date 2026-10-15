@@ -100,11 +100,11 @@ sudo apt-get install -y ros-foxy-rviz2 \
 
 ```bash
 cd ~
-git clone https://github.com/PSH0823/dodger.git
-cd ~/dodger/deployment
+git clone https://github.com/nnn27072005/DodgeBot.git dodgebot
+cd ~/dodgebot/deployment
 git log --oneline -1          # note the commit in your session log
 
-cd ~/dodger/deployment/ros2
+cd ~/dodgebot/deployment/ros2
 ./setup_external.sh
 ```
 
@@ -135,7 +135,7 @@ External sources ready.
 ## 4. Build — 15 packages
 
 ```bash
-cd ~/dodger/deployment/ros2
+cd ~/dodgebot/deployment/ros2
 source /opt/ros/foxy/setup.bash      # do not source any other workspace
 
 colcon build \
@@ -171,7 +171,7 @@ If it stops on one package, read `log/latest_build/<package>/stdout_stderr.log`.
 ## 5. Check the build
 
 ```bash
-cd ~/dodger/deployment/ros2
+cd ~/dodgebot/deployment/ros2
 source /opt/ros/foxy/setup.bash
 source install/setup.bash            # these two lines in every new terminal
 
@@ -247,7 +247,7 @@ ros2 run g1_perception_bringup config_diff.py     # must print PASS
 ## 7. Run
 
 ```bash
-cd ~/dodger/deployment/ros2
+cd ~/dodgebot/deployment/ros2
 source /opt/ros/foxy/setup.bash
 source install/setup.bash
 
@@ -288,7 +288,7 @@ If `/scan` is empty, suspect `/odom` first — the chain is
 ### Record a bag
 
 ```bash
-export SESSION=~/dodger/deployment/ros2/evidence/hardware/$(date +%F)/s1
+export SESSION=~/dodgebot/deployment/ros2/evidence/hardware/$(date +%F)/s1
 mkdir -p "$SESSION"
 ros2 bag record -o "$SESSION/run_$(date +%H%M%S)" \
     /livox/lidar /livox/imu /odom /tf /tf_static \

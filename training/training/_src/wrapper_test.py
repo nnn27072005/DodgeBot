@@ -81,8 +81,8 @@ class WrapperTest(parameterized.TestCase):
     np.testing.assert_array_equal(state.info['curriculum_stage'], (1, 1))
     np.testing.assert_array_equal(state.info['curriculum_stage_steps'], (0, 0))
 
-  def test_dodger_wrapper_uses_soft_discount_without_soft_reset(self):
-    class DodgerEnv:
+  def test_dodgebot_wrapper_uses_soft_discount_without_soft_reset(self):
+    class DodgeBotEnv:
 
       action_size = 1
 
@@ -117,7 +117,7 @@ class WrapperTest(parameterized.TestCase):
         )
 
     config = type(
-        'DodgerConfig',
+        'DodgeBotConfig',
         (),
         {
             'cmax_ema_tau': 0.95,
@@ -132,7 +132,7 @@ class WrapperTest(parameterized.TestCase):
         },
     )()
     env = wrapper.ConstraintsAsTerminationsWrapper(
-        DodgerEnv(), config, apply_soft_discount=True
+        DodgeBotEnv(), config, apply_soft_discount=True
     )
     rng = jax.random.split(jax.random.PRNGKey(0), 2)
     state = jax.jit(env.reset)(rng)

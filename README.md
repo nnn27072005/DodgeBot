@@ -1,8 +1,7 @@
-# DODGER
+# DodgeBot
 
-**DODGER**, **D**ynamic **O**bstacle Avoidance with **D**PCBF-**G**uided
-**E**xploration in **R**einforcement Learning, is a safety-guided RL framework
-for goal-directed robot navigation among multiple dynamic obstacles.
+DodgeBot is a safety-guided reinforcement learning framework for goal-directed
+robot navigation among multiple dynamic obstacles.
 
 ## Training
 

@@ -12,7 +12,7 @@
     install to /usr/local, which this machine cannot do (no sudo) and which
     would escape the pinned-workspace discipline anyway.
   </description>
-  <maintainer email="project-maintainers@users.noreply.github.com">Dodger Project Maintainers</maintainer>
+  <maintainer email="project-maintainers@users.noreply.github.com">DodgeBot Project Maintainers</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

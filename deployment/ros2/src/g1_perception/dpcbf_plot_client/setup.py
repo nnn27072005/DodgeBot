@@ -18,7 +18,7 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='Dodger Project Maintainers',
+    maintainer='DodgeBot Project Maintainers',
     maintainer_email='project-maintainers@users.noreply.github.com',
     description='Read-only live plotting client for the DPCBF stack '
                 '(Computer 3).',

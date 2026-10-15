@@ -845,7 +845,7 @@ class MultiObstacleNavigation(g1_base.G1Env):
     minimum_condition = jp.where(
         jp.isfinite(minimum_condition), minimum_condition, 0.0
     )
-    # DODGER always constrains the complete DPCBF condition evaluated at the
+    # DodgeBot always constrains the complete DPCBF condition evaluated at the
     # policy action: -(Lf h + Lg h u_policy + alpha h).
     dpcbf_violation = jp.maximum(-minimum_condition, 0.0)
     info["dodger_constraint_violation"] = dpcbf_violation

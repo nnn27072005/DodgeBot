@@ -1,4 +1,4 @@
-"""PPO loss for DODGER with sign-decomposed value estimation."""
+"""PPO loss for DodgeBot with sign-decomposed value estimation."""
 
 # The signature intentionally mirrors Brax's PPO loss configuration.
 # ruff: noqa: PLR0917
@@ -36,7 +36,7 @@ def compute_split_value_ppo_loss(
   """Computes one PPO loss using positive and negative value targets.
 
   The critic returns ``[..., 2]`` as ``[V_positive, V_negative]``.  Positive
-  GAE uses DODGER's soft continuation, while negative GAE uses only genuine hard
+    GAE uses DodgeBot's soft continuation, while negative GAE uses only genuine hard
   termination.  Their raw advantages are summed and normalized once for the
   actor.  The two squared value errors are averaged into one value loss.
   """

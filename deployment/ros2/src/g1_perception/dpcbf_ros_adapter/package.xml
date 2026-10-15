@@ -11,7 +11,7 @@
     and the T1/T6 filter-I/O capture format. This is the ONLY package that
     includes both rclcpp and dpcbf headers (§15 rule).
   </description>
-  <maintainer email="project-maintainers@users.noreply.github.com">Dodger Project Maintainers</maintainer>
+  <maintainer email="project-maintainers@users.noreply.github.com">DodgeBot Project Maintainers</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

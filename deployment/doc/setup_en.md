@@ -1,6 +1,6 @@
 # Deployment setup
 
-This guide installs the DODGER deployment code for simulation. The G1 onboard
+This guide installs the DodgeBot deployment code for simulation. The G1 onboard
 computer uses ROS 2 Foxy and requires the additional instructions in
 [ROS 2 Foxy setup](ros2_foxy_setup.md).
 
@@ -8,8 +8,8 @@ computer uses ROS 2 Foxy and requires the additional instructions in
 
 ```bash
 cd ~
-git clone https://github.com/PSH0823/dodger.git
-cd ~/dodger/deployment
+git clone https://github.com/nnn27072005/DodgeBot.git dodgebot
+cd ~/dodgebot/deployment
 ```
 
 All commands in the deployment documentation assume this directory layout.
@@ -48,7 +48,7 @@ Create the environment and install the Python package:
 ```bash
 conda create -n unitree_rl_mjlab python=3.11
 conda activate unitree_rl_mjlab
-cd ~/dodger/deployment
+cd ~/dodgebot/deployment
 pip install -e .
 ```
 

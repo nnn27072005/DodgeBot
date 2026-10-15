@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-"""DODGER training environments and utilities."""
+"""DodgeBot training environments and utilities."""
 import importlib
 
 from training._src import dm_control_suite

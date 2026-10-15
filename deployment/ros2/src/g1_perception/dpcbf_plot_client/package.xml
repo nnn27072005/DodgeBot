@@ -14,7 +14,7 @@
     Includes the synthetic publisher used to verify the whole path without a
     robot. Minimal Computer 3 install: this package + dpcbf_viz_msgs.
   </description>
-  <maintainer email="project-maintainers@users.noreply.github.com">Dodger Project Maintainers</maintainer>
+  <maintainer email="project-maintainers@users.noreply.github.com">DodgeBot Project Maintainers</maintainer>
   <license>Apache-2.0</license>
 
   <depend>rclpy</depend>

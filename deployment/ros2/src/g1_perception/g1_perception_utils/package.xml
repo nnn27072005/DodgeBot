@@ -10,7 +10,7 @@
     dpcbf_overlay (estimated-vs-GT obstacle overlay plus the DPCBF constraint
     geometry, §4.6 -- the sixth marker layer, alongside the four relays).
   </description>
-  <maintainer email="project-maintainers@users.noreply.github.com">Dodger Project Maintainers</maintainer>
+  <maintainer email="project-maintainers@users.noreply.github.com">DodgeBot Project Maintainers</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

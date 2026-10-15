@@ -1,6 +1,6 @@
 # Learning entry points
 
-The public DODGER workflow uses these commands:
+The public DodgeBot workflow uses these commands:
 
 ```bash
 train-jax-ppo --env_name=G1MultiObstacleNavigation

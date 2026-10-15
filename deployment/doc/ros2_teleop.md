@@ -37,7 +37,7 @@ Do this **separately on each computer** — one line differs between them.
 First confirm where the repository actually is on *this* machine:
 
 ```bash
-cd ~/dodger/deployment/ros2 && pwd
+cd ~/dodgebot/deployment/ros2 && pwd
 # if that fails, find it:
 find ~ -maxdepth 5 -name deps.repos -path "*/ros2/*" 2>/dev/null
 ```
@@ -50,7 +50,7 @@ export ROS_DOMAIN_ID=7                        # SAME on both computers
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp    # SAME on both computers
 export ROS_LOCALHOST_ONLY=0
 unset CYCLONEDDS_URI
-export G1_WS=$HOME/dodger/deployment/ros2      # this machine's own path
+export G1_WS=$HOME/dodgebot/deployment/ros2      # this machine's own path
 #export G1_PEER_IP=192.168.0.xxx              # the OTHER computer; only for §4
 EOF
 

@@ -10,7 +10,7 @@
     hull here, keyed to the autoware track id — the geometry a convex-set
     safety constraint consumes. HUMBLE-ONLY like the rest of the 3D stack.
   </description>
-  <maintainer email="project-maintainers@users.noreply.github.com">Dodger Project Maintainers</maintainer>
+  <maintainer email="project-maintainers@users.noreply.github.com">DodgeBot Project Maintainers</maintainer>
   <license>Apache-2.0</license>
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>rosidl_default_generators</buildtool_depend>

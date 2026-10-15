@@ -38,7 +38,7 @@ unset CYCLONEDDS_URI
 # the other machine's line:
 #     cd <wherever you cloned>/ros2 && pwd
 #     ls "$G1_WS/deps.repos"        # must exist
-export G1_WS=$HOME/dodger/deployment/ros2
+export G1_WS=$HOME/dodgebot/deployment/ros2
 
 # --- optional: only when multicast is blocked on the network ---------------
 # The IP of the OTHER computer on the link (on Computer 2: Computer 3's IP;

@@ -9,7 +9,7 @@ Every ROS terminal must use the same `ROS_DOMAIN_ID` and
 `ros2/` workspace first, then configure and build the controller:
 
 ```bash
-cd ~/dodger/deployment
+cd ~/dodgebot/deployment
 source /opt/ros/$ROS_DISTRO/setup.bash
 source ros2/install/setup.bash
 cmake -S deploy/robots/g1 -B deploy/robots/g1/build \
@@ -29,7 +29,7 @@ requires restarting `g1_ctrl`, not rebuilding.
 In every simulation terminal, first select the same loopback DDS config:
 
 ```bash
-cd ~/dodger/deployment
+cd ~/dodgebot/deployment
 source /opt/ros/$ROS_DISTRO/setup.bash
 source ros2/install/setup.bash
 source ros2/sim_navigation_env.sh
@@ -42,7 +42,7 @@ RViz, goal-view and `g1_ctrl` terminals on the system ROS Python environment.
 1. Start the ROS-enabled simulator:
 
    ```bash
-   cd ~/dodger/deployment
+   cd ~/dodgebot/deployment
    source /opt/ros/$ROS_DISTRO/setup.bash
    source ros2/install/setup.bash
    ./simulate/build/unitree_mujoco
@@ -51,7 +51,7 @@ RViz, goal-view and `g1_ctrl` terminals on the system ROS Python environment.
 2. Start the controller in another terminal:
 
    ```bash
-   cd ~/dodger/deployment
+   cd ~/dodgebot/deployment
    source /opt/ros/$ROS_DISTRO/setup.bash
    source ros2/install/setup.bash
    ./deploy/robots/g1/build/g1_ctrl --network=lo
@@ -63,7 +63,7 @@ RViz, goal-view and `g1_ctrl` terminals on the system ROS Python environment.
 3. Start simulated perception:
 
    ```bash
-   cd ~/dodger/deployment/ros2
+   cd ~/dodgebot/deployment/ros2
    source /opt/ros/$ROS_DISTRO/setup.bash
    source install/setup.bash
    ros2 launch g1_perception_bringup bringup.launch.py source:=sim viz:=rviz
@@ -89,7 +89,7 @@ Never source `ros2/sim_navigation_env.sh` in a hardware session.  The robot
 and operator laptop must instead have matching `ROS_DOMAIN_ID` and
 `RMW_IMPLEMENTATION` values in `~/.g1_net_env` (`rmw_fastrtps_cpp` in the
 field setup).  Run each command block below from the repository root
-(`dodger/deployment/`); all workspace and executable paths are relative to it.
+(`dodgebot/deployment/`); all workspace and executable paths are relative to it.
 
 ### Power mode: all eight CPU cores must be online
 

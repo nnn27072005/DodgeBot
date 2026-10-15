@@ -9,7 +9,7 @@
     torso_link -> mid360_link, xyz [0.0002835 0.00003 0.428434],
     rpy [pi 0.000892 0] (roll = pi: upside-down mount).
   </description>
-  <maintainer email="project-maintainers@users.noreply.github.com">Dodger Project Maintainers</maintainer>
+  <maintainer email="project-maintainers@users.noreply.github.com">DodgeBot Project Maintainers</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

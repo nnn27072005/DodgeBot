@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "dodger-training"
+name = "dodgebot-training"
 version = "0.1.0"
 readme = "README.md"
 authors = [{name = "Anonymous Robotics Authors"}]
@@ -48,7 +48,7 @@ test = [
     "pytest-xdist",
 ]
 dev = [
-    "dodger-training[test]",
+    "dodgebot-training[test]",
     "mypy",
     "pyink",
     "pytype",
@@ -64,9 +64,9 @@ learning = [
     "wandb>=0.27.0",
 ]
 all = [
-    "dodger-training[dev]",
-    "dodger-training[cuda]",
-    "dodger-training[learning]",
+    "dodgebot-training[dev]",
+    "dodgebot-training[cuda]",
+    "dodgebot-training[learning]",
 ]
 
 [tool.hatch.metadata]

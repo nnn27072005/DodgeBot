@@ -105,5 +105,5 @@ RUN if ! getent group ${HOST_GID} >/dev/null; then groupadd -g ${HOST_GID} ${HOS
  && echo 'export PS1="(foxy) \w\$ "' >> /home/${HOST_USER}/.bashrc
 
 USER ${HOST_UID}:${HOST_GID}
-WORKDIR /home/user/dodger/deployment/ros2
+WORKDIR /home/user/dodgebot/deployment/ros2
 CMD ["/bin/bash"]

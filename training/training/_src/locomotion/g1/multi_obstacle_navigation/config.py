@@ -226,11 +226,11 @@ def validate_config(config: config_dict.ConfigDict) -> None:
   if config.dpcbf.violation_lower_bound > 0.0:
     raise ValueError("DPCBF violation_lower_bound must be non-positive")
   if config.dodger.probability_ramp_end_steps <= 0:
-    raise ValueError("DODGER probability_ramp_end_steps must be positive")
+    raise ValueError("DodgeBot probability_ramp_end_steps must be positive")
   if not 0.0 <= config.dodger.cmax_ema_tau < 1.0:
-    raise ValueError("DODGER cmax_ema_tau must be in [0, 1)")
+    raise ValueError("DodgeBot cmax_ema_tau must be in [0, 1)")
   if config.dodger.normalization_epsilon <= 0.0:
-    raise ValueError("DODGER normalization_epsilon must be positive")
+    raise ValueError("DodgeBot normalization_epsilon must be positive")
   for name, constraint in (
       ("dpcbf_constraint", config.dodger.dpcbf_constraint),
       (
@@ -245,7 +245,7 @@ def validate_config(config: config_dict.ConfigDict) -> None:
         <= 1.0
     ):
       raise ValueError(
-          f"DODGER {name} probabilities must satisfy "
+          f"DodgeBot {name} probabilities must satisfy "
           "0 <= probability_min <= probability_max <= 1"
       )
   command_constraint = config.dodger.low_level_command_constraint
@@ -256,7 +256,7 @@ def validate_config(config: config_dict.ConfigDict) -> None:
   ):
     if len(limits) != 2 or limits[0] >= limits[1]:
       raise ValueError(
-          f"DODGER low_level_command_constraint.{name} must be [min, max]"
+          f"DodgeBot low_level_command_constraint.{name} must be [min, max]"
       )
   if config.qp.slack_weight <= 0.0:
     raise ValueError("QP slack_weight must be positive")

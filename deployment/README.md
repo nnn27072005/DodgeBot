@@ -1,6 +1,6 @@
-# DODGER deployment
+# DodgeBot deployment
 
-This directory contains the simulation and real-robot runtime for DODGER on
+This directory contains the simulation and real-robot runtime for DodgeBot on
 the Unitree G1. It includes the MuJoCo deployment simulator, the G1 controller,
 the exported high- and low-level ONNX policies, dynamic-obstacle perception,
 the interactive goal interface, and DPCBF visualization.
@@ -15,7 +15,7 @@ Training is maintained separately under [`../training`](../training/).
 3. [ROS 2 Foxy setup for the G1 onboard computer](doc/ros2_foxy_setup.md)
 4. [Network and remote visualization setup](doc/ros2_teleop.md)
 
-## Run DODGER
+## Run DodgeBot
 
 Use the [Navigation runtime guide](deploy/robots/g1/config/policy/navigation/v1/RUN.md)
 for the complete simulation and hardware procedures, safety checks, FSM
